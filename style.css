@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -42,11 +42,12 @@ body {
 
 .date p {
   color: lightslategray;
+  margin-top: 5px;
 }
 
 .weekdays {
   width: 100%;
-  height: 40px;
+  height: 57px;
   display: flex;
   background-color: rgba(0, 0, 0, 0.84);
 }
@@ -66,4 +67,36 @@ body {
 
 .weekdays div:hover {
   background-color: rgb(30, 29, 29);
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px;
+}
+
+.days div {
+  background-color: black;
+  border: black;
+  font-size: 14px;
+  margin: 3px;
+  width: 57.5px;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.days div:hover:not(.empty) {
+  background-color: aqua;
+  color: lightslategray;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.days .today {
+  background-color: aqua;
+  color: lightslategray;
 }
